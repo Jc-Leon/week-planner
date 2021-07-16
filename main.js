@@ -11,11 +11,10 @@ var $form = document.querySelector('form');
 function handleSubmit(event) {
   event.preventDefault();
   var entry = {};
-  entry.day = $form.day.value;
+  var day = $form.day.value;
   entry.time = $form.time.value;
   entry.description = $form.description.value;
-  data.entries.push(entry);
-console.log("value of entry", entry);
+  data[day].entries.push(entry);
 }
 
 function openModal(event) {
@@ -40,3 +39,4 @@ $week.addEventListener('click', function (event) {
 $modalSubmit.addEventListener('click', closeModal);
 $addEntry.addEventListener('click', openModal);
 $form.addEventListener('submit', handleSubmit);
+window.addEventListener('DOMContentLoaded', contentLoad);
