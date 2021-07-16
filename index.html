@@ -22,13 +22,11 @@
     <div class="modal">
       <div class="modal-content">
         <div class="row justify-center">
-        <div class="col-full">
-          <h1 class="text-center">Add Entry</h1>
+            <h1 class="text-center">Add Entry</h1>
         </div>
-        </div>
-        <div class="row">
-          <form>
-            <div class="select-day">
+        <form>
+            <div class="row">
+            <div class="select-day-time">
           <select>
             <option value="">Day of Week</option>
             <option value="">Monday</option>
@@ -39,8 +37,6 @@
             <option value="">Saturday</option>
             <option value="">Sunday</option>
           </select>
-          </div>
-          <div class="select-time">
           <select>
             <option value="">Time</option>
             <option value="">00:00</option>
@@ -68,11 +64,15 @@
             <option value="">22:00</option>
             <option value="">23:00</option>
           </select>
-          </div>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <button>Submit</button>
-          </form>
         </div>
+          </div>
+         <div class="row justify-center">
+            <textarea name="" id="" cols="30" rows="10" class="margin-top-rem"></textarea>
+         </div>
+          <div class="row justify-end margin-top-rem">
+            <button>Submit</button>
+          </div>
+          </form>
       </div>
     </div>
     <script src="data.js"></script>
