@@ -5,3 +5,16 @@
 .row {
   display: flex;
 }
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.modal-content {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
