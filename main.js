@@ -7,6 +7,7 @@ var $days = document.querySelectorAll('.dayofweek');
 var $week = document.querySelector('.week');
 var $scheduledEvents = document.querySelector('.scheduled-events');
 var $form = document.querySelector('form');
+var $schedule = document.querySelectorAll('.schedule');
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -28,7 +29,13 @@ function closeModal(event) {
 function switchDays(day) {
   var label = 'Scheduled Events For ';
   $scheduledEvents.textContent = label + day;
-  data.view = day.toLowerCase();
+  for (var i = 0; i < $schedule.length; i++) {
+    if (day !== $schedule[i].getAttribute('data-view')) {
+      $schedule[i].className = 'schedule hidden';
+    } else {
+      $schedule[i].className = 'schedule';
+    }
+  }
 }
 
 function renderEntry(entry) {
@@ -47,7 +54,7 @@ $week.addEventListener('click', function (event) {
   if (!event.target.matches('.dayofweek')) {
     return;
   }
-  switchDays(event.target.textContent);
+  switchDays(event.target.textContent.toLowerCase());
 });
 $modalSubmit.addEventListener('click', closeModal);
 $addEntry.addEventListener('click', openModal);
