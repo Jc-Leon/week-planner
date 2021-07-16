@@ -71,3 +71,23 @@ textarea {
   display: none !important;
 }
 
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+tr:nth-child(odd) {
+  background-color: #EEE;
+}
+
+th {
+  background-color: #CCC;
+  text-align: left;
+}
+
+td {
+  border-right: 2px solid black;
+}
