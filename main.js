@@ -10,15 +10,20 @@ var $form = document.querySelector('form');
 
 function handleSubmit(event) {
   event.preventDefault();
-  
+  var entry = {};
+  entry.day = $form.day.value;
+  entry.time = $form.time.value;
+  entry.description = $form.description.value;
+  data.entries.push(entry);
+console.log("value of entry", entry);
 }
 
 function openModal(event) {
   $modal.className = 'modal';
 }
-// function closeModal(event) {
-//   $modal.className = 'modal hidden';
-// }
+function closeModal(event) {
+  $modal.className = 'modal hidden';
+}
 
 function switchDays(day) {
   var label = 'Scheduled Events For ';

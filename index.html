@@ -1,132 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Week Planner</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div class="row justify-center">
-        <h1>Weekly Planner</h1>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="row week justify-between">
-      <button class="dayofweek">Sunday</button>
-      <button class="dayofweek">Monday</button>
-      <button class="dayofweek">Tuesday</button>
-      <button class="dayofweek">Wednesday</button>
-      <button class="dayofweek">Thursday</button>
-      <button class="dayofweek">Friday</button>
-      <button class="dayofweek">Saturday</button>
-    </div>
-    <div class="row justify-center">
-      <div class="add-entry-btn"><button>Add Entry</button></div>
-    </div>
-    <div class="row justify-center">
-      <div class="add-entry-btn"><h2 class="scheduled-events">Scheduled Events for Monday</h2></div>
-    </div>
-    <div class="schedule-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Descriptions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10:00</td>
-            <td class="row justify-between">Practice algorithms<button class="update-button">update</button></td>
-          </tr>
-          <tr>
-            <td>12:00</td>
-            <td>Go for a run</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
-  <div class="modal hidden">
-    <div class="modal-content">
-      <div class="row justify-center">
-        <h1>Add Entry</h1>
-      </div>
-      <form>
-        <div class="row">
-          <div class="select-day-time">
-            <select>
-              <option value="">Day of Week</option>
-              <option value="monday">Monday</option>
-              <option value="tuesday">Tuesday</option>
-              <option value="wednesday">Wednesday</option>
-              <option value="thursday">Thursday</option>
-              <option value="friday">Friday</option>
-              <option value="saturday">Saturday</option>
-              <option value="sunday">Sunday</option>
-            </select>
-            <select>
-              <option value="">Time</option>
-              <option value="0">00:00</option>
-              <option value="1">01:00</option>
-              <option value="2">02:00</option>
-              <option value="3">03:00</option>
-              <option value="4">04:00</option>
-              <option value="5">05:00</option>
-              <option value="6">06:00</option>
-              <option value="7">07:00</option>
-              <option value="8">08:00</option>
-              <option value="9">09:00</option>
-              <option value="10">10:00</option>
-              <option value="11">11:00</option>
-              <option value="12">12:00</option>
-              <option value="13">13:00</option>
-              <option value="14">14:00</option>
-              <option value="15">15:00</option>
-              <option value="16">16:00</option>
-              <option value="17">17:00</option>
-              <option value="18">18:00</option>
-              <option value="19">19:00</option>
-              <option value="20">20:00</option>
-              <option value="21">21:00</option>
-              <option value="22">22:00</option>
-              <option value="23">23:00</option>
-            </select>
-          </div>
-        </div>
+  <body>
+    <header>
+      <div class="container">
         <div class="row justify-center">
-          <textarea name="" id="" cols="30" rows="10" class="margin-top-rem"></textarea>
+          <h1>Weekly Planner</h1>
         </div>
-        <div class="row justify-end margin-top-rem">
-          <button class="modal-form-submit">Submit</button>
+      </div>
+    </header>
+    <main>
+      <div class="row week justify-between">
+        <button class="dayofweek">Sunday</button>
+        <button class="dayofweek">Monday</button>
+        <button class="dayofweek">Tuesday</button>
+        <button class="dayofweek">Wednesday</button>
+        <button class="dayofweek">Thursday</button>
+        <button class="dayofweek">Friday</button>
+        <button class="dayofweek">Saturday</button>
+      </div>
+      <div class="row justify-center">
+        <div class="add-entry-btn"><button>Add Entry</button></div>
+      </div>
+      <div class="row justify-center">
+        <div class="add-entry-btn">
+          <h2 class="scheduled-events">Scheduled Events for Monday</h2>
         </div>
-      </form>
+      </div>
+      <div class="schedule-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Descriptions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:00</td>
+              <td class="row justify-between">
+                Practice algorithms<button class="update-button">update</button>
+              </td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>Go for a run</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <div class="modal hidden">
+      <div class="modal-content">
+        <div class="row justify-center">
+          <h1>Add Entry</h1>
+        </div>
+        <form>
+          <div class="row">
+            <div class="select-day-time">
+              <select name="day">
+                <option value="">Day of Week</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+              </select>
+              <select name="time">
+                <option value="">Time</option>
+                <option value="0">00:00</option>
+                <option value="1">01:00</option>
+                <option value="2">02:00</option>
+                <option value="3">03:00</option>
+                <option value="4">04:00</option>
+                <option value="5">05:00</option>
+                <option value="6">06:00</option>
+                <option value="7">07:00</option>
+                <option value="8">08:00</option>
+                <option value="9">09:00</option>
+                <option value="10">10:00</option>
+                <option value="11">11:00</option>
+                <option value="12">12:00</option>
+                <option value="13">13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+                <option value="19">19:00</option>
+                <option value="20">20:00</option>
+                <option value="21">21:00</option>
+                <option value="22">22:00</option>
+                <option value="23">23:00</option>
+              </select>
+            </div>
+          </div>
+          <div class="row justify-center">
+            <textarea
+              name="description"
+              id=""
+              cols="30"
+              rows="10"
+              class="margin-top-rem"
+            ></textarea>
+          </div>
+          <div class="row justify-end margin-top-rem">
+            <button class="modal-form-submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
-</body>
-
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

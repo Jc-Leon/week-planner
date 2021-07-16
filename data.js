@@ -1,7 +1,12 @@
 /* exported data */
 var data = {
-  view: 'entry-form',
-  entries: [],
+  view: "monday",
   editing: null,
-  nextEntryId: 1
+  sunday: { entries: [], nextEntryId: 1 },
+  monday: { entries: [], nextEntryId: 1 },
+  tuesday: { entries: [], nextEntryId: 1 },
+  wednesday: { entries: [], nextEntryId: 1 },
+  thursday: { entries: [], nextEntryId: 1 },
+  friday: { entries: [], nextEntryId: 1 },
+  saturday: { entries: [], nextEntryId: 1 },
 };
