@@ -1,20 +1,29 @@
+/* global data */
+/* exported data */
 var $addEntry = document.querySelector('.add-entry-btn');
 var $modal = document.querySelector('.modal');
 var $modalSubmit = document.querySelector('.modal-form-submit');
 var $days = document.querySelectorAll('.dayofweek');
 var $week = document.querySelector('.week');
 var $scheduledEvents = document.querySelector('.scheduled-events');
+var $form = document.querySelector('form');
+
+function handleSubmit(event) {
+  event.preventDefault();
+  
+}
 
 function openModal(event) {
   $modal.className = 'modal';
 }
-function closeModal(event) {
-  $modal.className = 'modal hidden';
-}
+// function closeModal(event) {
+//   $modal.className = 'modal hidden';
+// }
 
 function switchDays(day) {
   var label = 'Scheduled Events For ';
   $scheduledEvents.textContent = label + day;
+  data.view = day.toLowerCase();
 }
 
 $week.addEventListener('click', function (event) {
@@ -25,3 +34,4 @@ $week.addEventListener('click', function (event) {
 });
 $modalSubmit.addEventListener('click', closeModal);
 $addEntry.addEventListener('click', openModal);
+$form.addEventListener('submit', handleSubmit);

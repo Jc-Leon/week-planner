@@ -86,8 +86,17 @@ tr:nth-child(odd) {
 th {
   background-color: #CCC;
   text-align: left;
+  border: 2px solid black;
 }
 
 td {
   border-right: 2px solid black;
+}
+
+.update-button {
+  margin-right: 10rem;
+  padding: 0.2rem 2rem;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
 }
