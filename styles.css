@@ -11,7 +11,7 @@
 }
 
 .modal-content {
-  max-width: 300px;
+  max-width: 600px;
   margin: 0 auto;
   background-color: white;
   padding: 1rem;
@@ -42,4 +42,8 @@
 
 textarea {
   width: 100%;
+  height: 6rem;
+}
+.hidden {
+  display: none !important;
 }
