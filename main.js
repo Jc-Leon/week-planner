@@ -11,10 +11,11 @@ var $form = document.querySelector('form');
 function handleSubmit(event) {
   event.preventDefault();
   var entry = {};
-  var day = $form.day.value;
+  entry.day = $form.day.value;
   entry.time = $form.time.value;
   entry.description = $form.description.value;
-  data[day].entries.push(entry);
+  data[entry.day].entries.push(entry);
+  renderEntry(entry);
 }
 
 function openModal(event) {
@@ -30,6 +31,18 @@ function switchDays(day) {
   data.view = day.toLowerCase();
 }
 
+function renderEntry(entry) {
+  var row = document.createElement('tr');
+  var time = document.createElement('td');
+  time.textContent = entry.time;
+  row.appendChild(time);
+  var description = document.createElement('td');
+  description.textContent = entry.description;
+  row.appendChild(description);
+  console.log('row', row);
+
+}
+
 $week.addEventListener('click', function (event) {
   if (!event.target.matches('.dayofweek')) {
     return;
@@ -39,4 +52,4 @@ $week.addEventListener('click', function (event) {
 $modalSubmit.addEventListener('click', closeModal);
 $addEntry.addEventListener('click', openModal);
 $form.addEventListener('submit', handleSubmit);
-window.addEventListener('DOMContentLoaded', contentLoad);
+// window.addEventListener('DOMContentLoaded');
