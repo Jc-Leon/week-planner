@@ -16,7 +16,7 @@ function handleSubmit(event) {
   entry.time = $form.time.value;
   entry.description = $form.description.value;
   data[entry.day].entries.push(entry);
-  renderEntry(entry);
+  renderAllTable();
 }
 
 function openModal(event) {
@@ -28,7 +28,7 @@ function closeModal(event) {
 
 function switchDays(day) {
   var label = "Scheduled Events For ";
-  $scheduledEvents.textContent = label + day;
+  $scheduledEvents.textContent = label + day[0].toUpperCase() + day.substring(1);
   for (var i = 0; i < $schedule.length; i++) {
     if (day !== $schedule[i].getAttribute("data-view")) {
       $schedule[i].className = "schedule hidden";
@@ -51,9 +51,21 @@ function renderEntry(entry) {
 function renderAllTable(event) {
   for (var i = 0; i < $schedule.length; i++) {
     $schedule[i].innerHTML = "";
+    var $tHead = document.createElement('thead');
+    var $tr = document.createElement('tr');
+    var $thTime = document.createElement('th');
+    $thTime.textContent = 'Time';
+    var $thDescription = document.createElement('th');
+    var $tBody = document.createElement('tbody');
+    $thDescription.textContent = 'Description';
+    $tHead.appendChild($tr);
+    $tr.appendChild($thTime);
+    $tr.appendChild($thDescription);
+    $schedule[i].appendChild($tHead);
+    $schedule[i].appendChild($tBody);
     var day = $schedule[i].getAttribute("data-view");
     for (var j = 0; j < data[day].entries.length; j++) {
-      $schedule[i].appendChild(renderEntry(data[day].entries[j]));
+      $tBody.appendChild(renderEntry(data[day].entries[j]));
     }
   }
 }
